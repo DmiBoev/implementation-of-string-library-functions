@@ -1,3 +1,4 @@
+//converts a string to lowercase
 #include <stdlib.h>
 #include "my_string.h"
 
