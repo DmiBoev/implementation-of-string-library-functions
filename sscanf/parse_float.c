@@ -1,5 +1,5 @@
 //float search
-#include "s21_string.h"
+#include "my_string.h"
 
 int parse_float(const char** src, long double* dest, int width) {
   propusk_simvols(src);
