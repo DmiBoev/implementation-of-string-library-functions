@@ -1,3 +1,4 @@
+//returns a new string in which str is inserted into src at position index
 #include <stdlib.h>
 #include "my_string.h"
 
