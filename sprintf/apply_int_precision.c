@@ -1,5 +1,5 @@
 #include "my_string.h"
-void apply_int_precision(char* buffer, format fmt) {
+void apply_int_precision(char* buffer, my_format fmt) {
   char temp[100];
   int i = 0;
   int j = 0;
