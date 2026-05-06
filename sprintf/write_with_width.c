@@ -1,7 +1,7 @@
 #include "my_string.h"
 
-char* write_with_width(char* str, const char* buffer, format fmt) {
-  int len = (int)strlen(buffer);
+char* write_with_width(char* str, const char* buffer, my_format fmt) {
+  int len = (int)my_strlen(buffer);
   int spaces = fmt.width - len;
   char pad = ' ';
 
