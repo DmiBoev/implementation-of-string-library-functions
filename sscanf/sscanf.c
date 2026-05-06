@@ -9,7 +9,7 @@ int my_sscanf(const char* src, const char* format, ...) {
 
   while (*format && !break_flag) {
     if (isspace(*format)) {
-      propusk_simvols(&src);
+      skip_spaces(&src);
       format++;
     } else if (*format != '%') {
       if (*src == *format) {
