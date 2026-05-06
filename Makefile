@@ -8,7 +8,7 @@ OBJ = $(SRC:.c=.o)
 
 LIB = string.a
 TEST_SRC = tests.c
-HEADER = string.h
+HEADER = my_string.h
 
 all: $(LIB)
 
