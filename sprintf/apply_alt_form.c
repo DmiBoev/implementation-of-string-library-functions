@@ -1,5 +1,5 @@
 #include "my_string.h"
-void apply_alt_form(char* buffer, format fmt, unsigned long num) {
+void apply_alt_form(char* buffer, my_format fmt, unsigned long num) {
   char temp[100];
   int i = 0;
   int j = 0;
