@@ -24,7 +24,7 @@ char* strtok(char* str, const char* delim) {
     last++;
   }
   if (*last == '\0') {
-    return S21_NULL;
+    return NULL;
   }
   token_start = last;
   while (*last != '\0') {
