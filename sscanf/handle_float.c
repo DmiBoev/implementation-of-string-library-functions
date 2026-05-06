@@ -2,7 +2,7 @@
 #include "my_string.h"
 
 int handle_float(const char** src, va_list* args, Token tok) {
-  propusk_simvols(src);
+  skip_spaces(src);
   long double val;
   int res = 0;
   if (parse_float(src, &val, tok.width)) {
