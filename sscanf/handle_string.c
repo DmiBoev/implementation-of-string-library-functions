@@ -3,7 +3,7 @@
 
 int handle_string(const char** src, va_list* args, Token tok, int* count,
                   int success_match) {
-  propusk_simvols(src);
+  skip_spaces(src);
   if (!**src) {
     if (!success_match) *count = -1;
     return 0;
