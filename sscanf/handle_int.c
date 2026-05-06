@@ -2,7 +2,7 @@
 #include "my_string.h"
 
 int handle_int(const char** src, va_list* args, Token tok, char spec) {
-  propusk_simvols(src);
+  skip_spaces(src);
   unsigned long long val;
   int base = (spec == 'o')                                 ? 8
              : (spec == 'x' || spec == 'X' || spec == 'p') ? 16
