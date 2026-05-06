@@ -1,6 +1,6 @@
 #include "my_string.h"
 
-const char* parse_format(const char* format, format* fmt,
+const char* parse_format(const char* format, my_format* fmt,
                              va_list* args) {
   while (*format == '-' || *format == '+' || *format == ' ' || *format == '#' ||
          *format == '0') {
