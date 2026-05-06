@@ -1,7 +1,7 @@
 #include "my_string.h"
 
 format init_format(void) {
-  s21_format fmt;
+  my_format fmt;
   fmt.minus = 0;
   fmt.plus = 0;
   fmt.space = 0;
