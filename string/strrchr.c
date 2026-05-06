@@ -3,7 +3,7 @@
 
 char* my_strrchr(const char* str, int c) {
   char* result = NULL;
-  size i = 0;
+  my_size i = 0;
   while (str[i] != '\0') {
     if (str[i] == (char)c) result = (char*)&str[i];
     i++;
