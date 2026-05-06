@@ -23,7 +23,7 @@ typedef struct {
   int precision_set;
   char length;
   char spec;
-} format;
+} my_format;
 
 typedef size_t my_size;
 
@@ -32,11 +32,11 @@ int my_memcmp(const void *str1, const void *str2, my_size n);
 void *my_memcpy(void *dest, const void *src, my_size n);
 void *my_memset(void *str, int c, my_size n);
 
-void apply_string_precision(char *buffer, format fmt);
+void apply_string_precision(char *buffer, my_format fmt);
 void long_to_str(long num, char *buffer);
-void apply_int_sign(char *buffer, format fmt);
-void apply_int_precision(char *buffer, format fmt);
-void apply_alt_form(char *buffer, format fmt, unsigned long num);
+void apply_int_sign(char *buffer, my_format fmt);
+void apply_int_precision(char *buffer, my_format fmt);
+void apply_alt_form(char *buffer, my_format fmt, unsigned long num);
 void apply_pointer_prefix(char *buffer);
 
 char *my_strncat(char *dest, const char *src, my_size n);
@@ -51,12 +51,12 @@ char *my_strrchr(const char *str, int c);
 char *my_strstr(const char *haystack, const char *needle);
 char *my_strtok(char *str, const char *delim);
 void ulong_to_str(unsigned long num, char *str);
-void general_to_str(long double num, char *str, format fmt);
+void general_to_str(long double num, char *str, my_format fmt);
 int my_sprintf(char *str, const char *format, ...);
 int get_exp(long double num);
-unsigned long get_unsigned_arg(va_list *args, format fmt);
+unsigned long get_unsigned_arg(va_list *args, my_format fmt);
 int my_sscanf(const char *src, const char *format, ...);
-long get_signed_arg(va_list *args, format fmt);
+long get_signed_arg(va_list *args, my_format fmt);
 int get_digit(char c, int base);
 void propusk_simvols(const char **src);
 int parse_uint(const char **src, unsigned long long *dest, int base, int width);
@@ -72,19 +72,19 @@ int handle_float(const char **src, va_list *args, Token tok);
 int handle_string(const char **src, va_list *args, Token tok, int *count,
                   int success_match);
 int handle_char(const char **src, va_list *args, Token tok);
-format init_format(void);
+my_format init_format(void);
 void *my_insert(const char *src, const char *str, my_size start_index);
 void *my_to_lower(const char *str);
 void *my_to_upper(const char *str);
 void *my_trim(const char *src, const char *trim_chars);
 int is_digit(char c);
-const char *parse_format(const char *format, format *fmt,
+const char *parse_format(const char *format, my_format *fmt,
                              va_list *args);
 void ulong_to_str(unsigned long num, char *str);
 void remove_trailing_zeros(char *str);
 void ulong_to_base(unsigned long num, char *str, int base, int uppercase);
-void scientific_to_str(long double num, char *str, format fmt);
-char *write_with_width(char *str, const char *buffer, format fmt);
+void scientific_to_str(long double num, char *str, my_format fmt);
+char *write_with_width(char *str, const char *buffer, my_format fmt);
 void float_to_str(long double num, char *str, format fmt);
 void exp_to_str(int exp, char *str, int uppercase);
 #endif
