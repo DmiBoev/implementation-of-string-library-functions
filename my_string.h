@@ -27,7 +27,7 @@ typedef struct {
 
 typedef size_t my_size;
 
-void *my_memchr(const void *str, int c, s21_size n);
+void *my_memchr(const void *str, int c, my_size n);
 int my_memcmp(const void *str1, const void *str2, my_size n);
 void *my_memcpy(void *dest, const void *src, my_size n);
 void *my_memset(void *str, int c, my_size n);
@@ -43,9 +43,9 @@ char *my_strncat(char *dest, const char *src, size n);
 char *my_strchr(const char *str, int c);
 int my_strncmp(const char *str1, const char *str2, size n);
 char *my_strncpy(char *dest, const char *src, size n);
-s21_size my_strcspn(const char *str1, const char *str2);
+my_size my_strcspn(const char *str1, const char *str2);
 char *my_strerror(int errnum);
-s21_size my_strlen(const char *str);
+my_size my_strlen(const char *str);
 char *my_strpbrk(const char *str1, const char *str2);
 char *my_strrchr(const char *str, int c);
 char *my_strstr(const char *haystack, const char *needle);
