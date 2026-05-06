@@ -1,6 +1,6 @@
 #include "my_string.h"
 
-void general_to_str(long double num, char* str, format fmt) {
+void general_to_str(long double num, char* str, my_format fmt) {
   int exp = get_exp(num);
 
   if (!fmt.precision_set) {
