@@ -1,5 +1,5 @@
 #include "my_string.h"
-void float_to_str(long double num, char* str, format fmt) {
+void float_to_str(long double num, char* str, my_format fmt) {
   if (!fmt.precision_set) {
     fmt.precision = 6;
   }
