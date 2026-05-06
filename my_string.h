@@ -39,10 +39,10 @@ void apply_int_precision(char *buffer, format fmt);
 void apply_alt_form(char *buffer, format fmt, unsigned long num);
 void apply_pointer_prefix(char *buffer);
 
-char *my_strncat(char *dest, const char *src, size n);
+char *my_strncat(char *dest, const char *src, my_size n);
 char *my_strchr(const char *str, int c);
-int my_strncmp(const char *str1, const char *str2, size n);
-char *my_strncpy(char *dest, const char *src, size n);
+int my_strncmp(const char *str1, const char *str2, my_size n);
+char *my_strncpy(char *dest, const char *src, my_size n);
 my_size my_strcspn(const char *str1, const char *str2);
 char *my_strerror(int errnum);
 my_size my_strlen(const char *str);
@@ -73,7 +73,7 @@ int handle_string(const char **src, va_list *args, Token tok, int *count,
                   int success_match);
 int handle_char(const char **src, va_list *args, Token tok);
 format init_format(void);
-void *my_insert(const char *src, const char *str, size start_index);
+void *my_insert(const char *src, const char *str, my_size start_index);
 void *my_to_lower(const char *str);
 void *my_to_upper(const char *str);
 void *my_trim(const char *src, const char *trim_chars);
