@@ -1,6 +1,6 @@
 #include "my_string.h"
 
-int sprintf(char* str, const char* format, ...) {
+int my_sprintf(char* str, const char* format, ...) {
   va_list args;
   va_start(args, format);
   char* start = str;
