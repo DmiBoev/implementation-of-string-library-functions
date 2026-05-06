@@ -1,6 +1,6 @@
 #include "my_string.h"
 
-long get_signed_arg(va_list* args, format fmt) {
+long get_signed_arg(va_list* args, my_format fmt) {
   long value = 0;
   if (fmt.length == 'h') {
     value = (short)va_arg(*args, int);
