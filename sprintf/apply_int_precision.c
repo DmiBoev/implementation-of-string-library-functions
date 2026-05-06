@@ -3,7 +3,7 @@ void apply_int_precision(char* buffer, my_format fmt) {
   char temp[100];
   int i = 0;
   int j = 0;
-  int len = (int)strlen(buffer);
+  int len = (int)my_strlen(buffer);
 
   if (buffer[0] == '-' || buffer[0] == '+' || buffer[0] == ' ') {
     temp[i++] = buffer[0];
