@@ -2,7 +2,7 @@
 #include "my_string.h"
 
 int parse_float(const char** src, long double* dest, int width) {
-  propusk_simvols(src);
+  skip_spaces(src);
   if (!**src) return 0;
 
   int res_width = (width <= 0) ? 1000 : width;
