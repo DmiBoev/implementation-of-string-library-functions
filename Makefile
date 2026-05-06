@@ -16,7 +16,6 @@ $(LIB): $(OBJ)
 	ar rcs $(LIB) $(OBJ)
 	ranlib $(LIB)
 
-
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -I. -c $< -o $@
 
@@ -24,13 +23,13 @@ test: clean $(LIB)
 	$(CC) $(CFLAGS) $(TEST_SRC) $(LIB) -o test $(CHECK_FLAGS)
 	-./test
 
-
 gcov_report: clean
 	$(CC) $(CFLAGS) $(GCOV_FLAGS) -c $(SRC)
-	ar rcs $(LIB) $(OBJ)
-	$(CC) $(CFLAGS) $(GCOV_FLAGS) $(TEST_SRC) $(LIB) -o test $(CHECK_FLAGS)
+	ar rcs $(LIB) *.o
+	ranlib $(LIB)
+	$(CC) $(CFLAGS) $(TEST_SRC) $(LIB) -o test $(CHECK_FLAGS) $(GCOV_FLAGS)
 	./test
-	lcov -t "string" -o coverage.info -c -d .
+	lcov -t "string_report" -o coverage.info -c -d .
 	genhtml -o report coverage.info
 	open report/index.html || xdg-open report/index.html || true
 
