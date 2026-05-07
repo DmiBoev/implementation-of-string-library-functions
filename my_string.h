@@ -85,6 +85,6 @@ void remove_trailing_zeros(char *str);
 void ulong_to_base(unsigned long num, char *str, int base, int uppercase);
 void scientific_to_str(long double num, char *str, my_format fmt);
 char *write_with_width(char *str, const char *buffer, my_format fmt);
-void float_to_str(long double num, char *str, format fmt);
+void float_to_str(long double num, char *str, my_format fmt);
 void exp_to_str(int exp, char *str, int uppercase);
 #endif
